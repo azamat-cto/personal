@@ -94,7 +94,7 @@
         "arrow-body-style": ["error", "as-needed"],
         "padded-blocks": ["error", "never"],
         "semi": ["error", "always"],
-        "max-len": ["error", { "code": 120 }],
+        "max-len": ["error", { "code": 120, "ignoreStrings": true }],
         "indent": ["error", 4],
         "react/self-closing-comp": [
             "error",
