@@ -1,21 +1,22 @@
-import { FC, ReactNode } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+    title: "",
+    description: "",
 };
 
 type RootLayoutProps = {
-  children: ReactNode
-}
+    children: React.ReactNode;
+};
 
-const RootLayout: FC<Readonly<RootLayoutProps>> = ({ children }) => {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+function RootLayout({ children }: Readonly<RootLayoutProps>) {
+    return (
+        <html lang="en">
+            <body>
+                <main>{children}</main>
+            </body>
+        </html>
+    );
 }
 
 export default RootLayout;

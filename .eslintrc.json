@@ -1,3 +1,115 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+    ],
+    "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [".eslintrc.{js,cjs}"],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["eslint-plugin-import-helpers", "react-refresh", "prettier"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "react-hooks/rules-of-hooks": 2,
+        "react-hooks/exhaustive-deps": 1,
+        "newline-before-return": 2,
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0,
+        "import-helpers/order-imports": [
+            2,
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    ["/^next/", "module"],
+                    "/^@/styles/",
+                    "/^@/components/",
+                    "/^@/lib/",
+                    ["parent", "sibling", "index"]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            2,
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "no-trailing-spaces": [2, { "skipBlankLines": false }],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 1 }],
+        "object-curly-spacing": ["error", "always"],
+        "comma-spacing": [2, { "before": false, "after": true }],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+        "space-infix-ops": ["error", { "int32Hint": false }],
+        "space-after-keywords": "off",
+        "keyword-spacing": [2, { "before": true, "after": true }],
+        "react/jsx-indent": [2, 4, { "indentLogicalExpressions": true }],
+        "arrow-body-style": ["error", "as-needed"],
+        "padded-blocks": ["error", "never"],
+        "semi": ["error", "always"],
+        "max-len": ["error", { "code": 120 }],
+        "indent": ["error", 4],
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ],
+        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+        "no-console": [
+            2,
+            {
+                "allow": ["warn", "error"]
+            }
+        ]
+    },
+    "root": true
 }
