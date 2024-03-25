@@ -28,7 +28,7 @@ type RootLayoutProps = {
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang="en" className={cn(roboto.variable, lora.variable)} suppressHydrationWarning>
-            <body className="font-sans antialiased">
+            <body className="bg-background font-sans text-foreground antialiased">
                 <main>{children}</main>
             </body>
         </html>
