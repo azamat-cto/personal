@@ -27,7 +27,11 @@ type RootLayoutProps = {
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
-        <html lang="en" className={cn(roboto.variable, lora.variable)} suppressHydrationWarning>
+        <html
+            lang="en"
+            className={cn(roboto.variable, lora.variable, "scroll-smooth")}
+            suppressHydrationWarning
+        >
             <body className="bg-background font-sans text-foreground antialiased">
                 <main>{children}</main>
             </body>
