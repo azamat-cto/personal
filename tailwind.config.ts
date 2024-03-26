@@ -8,13 +8,14 @@ const config = {
     theme: {
         container: {
             center: true,
-            padding: "2rem",
+            padding: "1rem",
             screens: {
                 "2xl": "1400px",
             },
         },
         fontFamily: {
             sans: ["var(--font-roboto)", ...fontFamily.sans],
+            display: ["var(--font-lora)", "serif"],
         },
         fontSize: {
             "2xs": "0.5rem",
