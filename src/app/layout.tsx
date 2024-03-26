@@ -17,7 +17,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-    title: "",
+    title: "Azamat's personal website",
     description: "",
 };
 
