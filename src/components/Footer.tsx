@@ -8,7 +8,7 @@ function Footer() {
             <div className="container">
                 <div className="pb-28 pt-12">
                     <div className="text-center">
-                        <h1 className="mb-4 font-display text-2xl font-bold">Azamat.</h1>
+                        <h1 className="mb-4 text-2xl">Azamat.</h1>
                         <p>Frontend Developer</p>
                     </div>
 
