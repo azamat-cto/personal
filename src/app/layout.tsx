@@ -1,8 +1,10 @@
 import "@/css/global.css";
+
 import type { Metadata } from "next";
 import { Roboto, Lora } from "next/font/google";
 
 import Header from "@/components/Header";
+import ThemeProvider from "@/components/ThemeProvider";
 
 import { cn } from "@/lib/utils";
 
@@ -35,8 +37,15 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
             suppressHydrationWarning
         >
             <body className="bg-background font-sans text-foreground antialiased">
-                <Header />
-                <main>{children}</main>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Header />
+                    <main>{children}</main>
+                </ThemeProvider>
             </body>
         </html>
     );

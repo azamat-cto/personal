@@ -9,9 +9,9 @@ import IconCloseLine from "./icons/IconCloseLine";
 import IconHome5Line from "./icons/IconHome5Line";
 import IconImageLine from "./icons/IconImageLine";
 import IconMenu4Line from "./icons/IconMenu4Line";
-import IconMoonLine from "./icons/IconMoonLine";
 import IconTrophyLine from "./icons/IconTrophyLine";
 import MobileLink from "./MobileLink";
+import ModeToggle from "./ModeToggle";
 import { Button } from "./ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
 
@@ -78,9 +78,7 @@ function Header() {
                             </ul>
                         </nav>
                         <div className="flex items-center gap-x-2">
-                            <Button className="text-lg" size="icon" variant="ghost">
-                                <IconMoonLine />
-                            </Button>
+                            <ModeToggle />
                             <Sheet open={open} onOpenChange={setOpen}>
                                 <SheetTrigger asChild>
                                     <Button
@@ -89,6 +87,7 @@ function Header() {
                                         variant="ghost"
                                     >
                                         <IconMenu4Line />
+                                        <span className="sr-only">Open</span>
                                     </Button>
                                 </SheetTrigger>
                                 <SheetContent
