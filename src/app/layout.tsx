@@ -3,6 +3,7 @@ import "@/css/global.css";
 import type { Metadata } from "next";
 import { Roboto, Lora } from "next/font/google";
 
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ThemeProvider from "@/components/ThemeProvider";
 
@@ -43,8 +44,11 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <Header />
-                    <main>{children}</main>
+                    <div className="flex min-h-[100dvh] flex-col">
+                        <Header />
+                        <main className="flex-1 overflow-hidden">{children}</main>
+                        <Footer />
+                    </div>
                 </ThemeProvider>
             </body>
         </html>
