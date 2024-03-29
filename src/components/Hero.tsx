@@ -93,9 +93,9 @@ function Hero() {
                                 </a>
                                 <a
                                     className="font-display"
-                                    href="mailto:cto.azamatkhabibullaev@gmail.com"
+                                    href="mailto:azamatkhabibullaevcto@gmail.com"
                                 >
-                                    cto.azamatkhabibullaev@gmail.com
+                                    azamatkhabibullaevcto@gmail.com
                                 </a>
                                 <a className="font-display" href="tel:998909179930">
                                     +998 (90) 917-99-30
