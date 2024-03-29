@@ -103,13 +103,7 @@
                 "html": true
             }
         ],
-        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
-        "no-console": [
-            2,
-            {
-                "allow": ["warn", "error"]
-            }
-        ]
+        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }]
     },
     "root": true
 }
