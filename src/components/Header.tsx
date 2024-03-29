@@ -61,7 +61,7 @@ function Header() {
         <header className="fixed bottom-[2rem] left-0 z-50 w-full md:static">
             <div className="nav container">
                 <div className="flex h-[4rem] items-center justify-between rounded-[3rem] bg-background px-6 shadow-lg md:rounded-none md:px-[0] md:shadow-none">
-                    <a className="font-display font-medium" href="/" title="logo">
+                    <a className="font-display font-medium text-heading" href="/" title="logo">
                         Azamat.
                     </a>
 

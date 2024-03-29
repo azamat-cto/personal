@@ -18,25 +18,30 @@ const config = {
             display: ["var(--font-lora)", "serif"],
         },
         fontSize: {
-            "2xs": "0.5rem",
-            xs: "0.75rem",
-            sm: "0.875rem",
-            md: "1rem",
-            lg: "1.125rem",
-            xl: "1.25rem",
-            "2xl": "1.5rem",
-            "3xl": "1.875rem",
-            "4xl": "2.25rem",
-            "5xl": "3rem",
-            "6xl": "3.75rem",
-            "7xl": "4.5rem",
-            "8xl": "6rem",
-            "9xl": "8rem",
+            "3xs": "0.5rem", // 8px
+            "2xs": "0.625rem", // 10px
+            xs: "0.75rem", // 12px
+            sm: "0.875rem", // 14px
+            md: "1rem", // 16px
+            lg: "1.125rem", // 18px
+            xl: "1.25rem", // 20px
+            "2xl": "1.5rem", // 24px
+            "3xl": "1.875rem", // 30px
+            "4xl": "2.25rem", // 36px
+            "5xl": "3rem", // 48px
+            "6xl": "3.75rem", // 60px
+            "7xl": "4.5rem", // 72px
+            "8xl": "6rem", // 96px
+            "9xl": "8rem", // 128px
         },
         extend: {
             colors: {
                 background: "hsl(var(--background))",
-                foreground: "hsl(var(--foreground))",
+                foreground: {
+                    DEFAULT: "hsl(var(--foreground))",
+                    light: "hsl(var(--foreground-light))",
+                },
+                heading: "hsl(var(--heading))",
                 card: {
                     DEFAULT: "hsl(var(--card))",
                     foreground: "hsl(var(--card-foreground))",
@@ -83,10 +88,28 @@ const config = {
                     from: { height: "var(--radix-accordion-content-height)" },
                     to: { height: "0" },
                 },
+                "bounce-skills": {
+                    "0%": {
+                        transform: "translate(0)",
+                    },
+                    "20%": {
+                        transform: "translateY(-6px)",
+                    },
+                    "40%": {
+                        transform: "translate(0)",
+                    },
+                    "60%": {
+                        transform: "translateY(-3px)",
+                    },
+                    "80%": {
+                        transform: "translate(0)",
+                    },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
+                "bounce-skills": "bounce-skills 0.6s",
             },
         },
     },
