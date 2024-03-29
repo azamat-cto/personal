@@ -54,10 +54,10 @@ function Projects() {
                 </div>
 
                 <div className="border-b border-heading pb-14">
-                    <Carousel className="mx-auto w-full max-w-sm">
+                    <Carousel className="mx-auto w-[250px]">
                         <CarouselContent>
                             {projects.map((project, index) => (
-                                <CarouselItem className="pl-8" key={project.id + index}>
+                                <CarouselItem key={project.id + index}>
                                     <div className="mb-5">
                                         <Image
                                             className="rounded-xl"
