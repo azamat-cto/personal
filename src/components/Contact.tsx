@@ -9,7 +9,6 @@ import { toast } from "sonner";
 import * as yup from "yup";
 
 import IconArrowRightLine from "./icons/IconArrowRightLine";
-import IconArrowRightUpLine from "./icons/IconArrowRightUpLine";
 import IconChat3Line from "./icons/IconChat3Line";
 import IconSendPlaneLine from "./icons/IconSendPlaneLine";
 import { Button } from "./ui/button";
