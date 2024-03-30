@@ -1,6 +1,6 @@
 {
     "name": "personal",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -21,6 +21,7 @@
         "@react-email/tailwind": "^0.0.15",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
+        "dayjs": "^1.11.10",
         "embla-carousel-react": "^8.0.0",
         "next": "14.1.4",
         "next-themes": "^0.3.0",
@@ -29,6 +30,7 @@
         "react-email": "^2.1.1",
         "react-hook-form": "^7.51.2",
         "resend": "^3.2.0",
+        "sonner": "^1.4.41",
         "tailwind-merge": "^2.2.2",
         "tailwindcss": "^3.4.1",
         "tailwindcss-animate": "^1.0.7",

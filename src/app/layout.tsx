@@ -6,6 +6,7 @@ import { Roboto, Lora } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 import { cn } from "@/lib/utils";
 
@@ -49,6 +50,7 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
                         <main className="flex-1 overflow-hidden">{children}</main>
                         <Footer />
                     </div>
+                    <Toaster />
                 </ThemeProvider>
             </body>
         </html>

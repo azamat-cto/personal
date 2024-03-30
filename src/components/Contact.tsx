@@ -2,8 +2,10 @@
 
 import { sendEmail } from "@/actions/sendEmailAction";
 import { yupResolver } from "@hookform/resolvers/yup";
+import dayjs from "dayjs";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
 import * as yup from "yup";
 
 import IconArrowRightLine from "./icons/IconArrowRightLine";
@@ -55,6 +57,13 @@ function Contact() {
         setLoading(true);
         try {
             await sendEmail(data);
+            toast("Message successfully sent", {
+                description: dayjs(new Date()).format(`dddd, MMMM D, YYYY [at] HH:mm A`),
+                action: {
+                    label: "Close",
+                    onClick: () => console.log("Closed"),
+                },
+            });
             reset({
                 username: "",
                 email: "",
