@@ -58,9 +58,9 @@ function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed bottom-[2rem] left-0 z-50 w-full md:static">
+        <header className="fixed bottom-[1rem] left-0 z-50 w-full md:static">
             <div className="nav container">
-                <div className="flex h-[4rem] items-center justify-between rounded-[3rem] bg-background px-6 shadow-lg md:rounded-none md:px-[0] md:shadow-none">
+                <div className="flex h-[4rem] items-center justify-between rounded-[3rem] border bg-background px-6 shadow-3xl md:rounded-none md:px-[0] md:shadow-none">
                     <a className="font-display font-medium text-heading" href="/" title="logo">
                         Azamat.
                     </a>
@@ -91,7 +91,7 @@ function Header() {
                                     </Button>
                                 </SheetTrigger>
                                 <SheetContent
-                                    className="bottom-[2rem] left-4 right-4 mx-auto rounded-[2rem] px-6 pb-20 pt-8"
+                                    className="bottom-[1rem] left-4 right-4 mx-auto rounded-[2rem] px-6 pb-20 pt-8"
                                     side="bottom"
                                 >
                                     <nav className="h-full">

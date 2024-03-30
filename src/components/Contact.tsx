@@ -146,7 +146,7 @@ function Contact() {
                         </h2>
 
                         <form name="formData" onSubmit={handleSubmit(onSubmit)}>
-                            <div className="relative grid gap-y-9">
+                            <div className="relative grid gap-y-8">
                                 <div className="relative h-[4rem]">
                                     <Label
                                         className="absolute -top-3 left-5 z-20 bg-background p-[0.35rem] text-xs font-medium text-heading"
@@ -208,13 +208,13 @@ function Contact() {
 
                                 <div>
                                     <Button
-                                        className="gap-x-1 font-display text-xl font-semibold text-heading hover:bg-background hover:text-heading"
-                                        variant="ghost"
+                                        className="h-12 w-full rounded-[2rem] text-lg"
+                                        size="lg"
+                                        variant="neutral"
                                         type="submit"
                                         disabled={loading}
                                     >
-                                        <span>{loading ? "Sending..." : "Submit"}</span>
-                                        {!loading && <IconArrowRightUpLine className="text-2xl" />}
+                                        <span>{loading ? "Sending..." : "Send"}</span>
                                     </Button>
                                 </div>
                             </div>

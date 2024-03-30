@@ -70,6 +70,10 @@ const config = {
                     DEFAULT: "hsl(var(--destructive))",
                     foreground: "hsl(var(--destructive-foreground))",
                 },
+                neutral: {
+                    DEFAULT: "hsl(var(--neutral))",
+                    foreground: "hsl(var(--neutral-foreground))",
+                },
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -78,6 +82,9 @@ const config = {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
+            },
+            boxShadow: {
+                "3xl": "10px 10px 15px -3px hsla(207, 24%, 35%, 0.1), -10px -10px 15px -3px hsla(207, 24%, 35%, 0.1)",
             },
             keyframes: {
                 "accordion-down": {
