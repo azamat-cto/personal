@@ -69,6 +69,9 @@ function Contact() {
                 email: "",
                 message: "",
             });
+            window.scrollTo({
+                top: 0,
+            });
         } catch (error) {
             console.log(error);
         } finally {
