@@ -1,6 +1,10 @@
 "use client";
 
-import { FormEvent } from "react";
+import { sendEmail } from "@/actions/sendEmailAction";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import * as yup from "yup";
 
 import IconArrowRightLine from "./icons/IconArrowRightLine";
 import IconArrowRightUpLine from "./icons/IconArrowRightUpLine";
@@ -11,10 +15,56 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 
+type Inputs = {
+    username: string;
+    email: string;
+    message: string;
+};
+
+const schema = yup
+    .object({
+        username: yup
+            .string()
+            .min(3, "Username must be at least 3 characters")
+            .max(255, "You may only include a maximum of 255 characters")
+            .required("Username is a required field"),
+        email: yup
+            .string()
+            .email("Email must be a valid email")
+            .required("Email is a required field"),
+        message: yup
+            .string()
+            .max(255, "You may only include a maximum of 255 characters")
+            .required("Message is a required field"),
+    })
+    .required();
+
 function Contact() {
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        console.log(event);
+    const [loading, setLoading] = useState(false);
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm({
+        resolver: yupResolver(schema),
+    });
+
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        setLoading(true);
+        try {
+            await sendEmail(data);
+            reset({
+                username: "",
+                email: "",
+                message: "",
+            });
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -83,8 +133,8 @@ function Contact() {
                             <span>Write me your project</span>
                         </h2>
 
-                        <form name="formData" onSubmit={handleSubmit}>
-                            <div className="relative grid gap-y-8">
+                        <form name="formData" onSubmit={handleSubmit(onSubmit)}>
+                            <div className="relative grid gap-y-9">
                                 <div className="relative h-[4rem]">
                                     <Label
                                         className="absolute -top-3 left-5 z-20 bg-background p-[0.35rem] text-xs font-medium text-heading"
@@ -93,12 +143,16 @@ function Contact() {
                                         Username
                                     </Label>
                                     <Input
-                                        className="absolute left-0 top-0 z-10 h-full w-full rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
+                                        className="h-full rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
                                         type="text"
-                                        name="username"
                                         id="username"
                                         placeholder="Enter username"
+                                        disabled={loading}
+                                        {...register("username")}
                                     />
+                                    <span className="pl-6 text-sm text-red-500">
+                                        {errors.username?.message}
+                                    </span>
                                 </div>
 
                                 <div className="relative h-[4rem]">
@@ -109,12 +163,16 @@ function Contact() {
                                         Email
                                     </Label>
                                     <Input
-                                        className="absolute left-0 top-0 z-10 h-full w-full rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
+                                        className="h-full rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
                                         type="text"
-                                        name="email"
                                         id="email"
                                         placeholder="Enter email"
+                                        disabled={loading}
+                                        {...register("email")}
                                     />
+                                    <span className="pl-6 text-sm text-red-500">
+                                        {errors.email?.message}
+                                    </span>
                                 </div>
 
                                 <div className="relative h-40">
@@ -125,11 +183,15 @@ function Contact() {
                                         Message
                                     </Label>
                                     <Textarea
-                                        className="absolute left-0 top-0 z-10 h-full w-full resize-none rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
-                                        name="message"
+                                        className="h-full resize-none rounded-[2rem] border-2 border-foreground-light bg-none p-6 font-display text-md text-heading focus-visible:ring-0"
                                         id="message"
                                         placeholder="Enter message"
+                                        disabled={loading}
+                                        {...register("message")}
                                     />
+                                    <span className="pl-6 text-sm text-red-500">
+                                        {errors.message?.message}
+                                    </span>
                                 </div>
 
                                 <div>
@@ -137,9 +199,10 @@ function Contact() {
                                         className="gap-x-1 font-display text-xl font-semibold text-heading hover:bg-background hover:text-heading"
                                         variant="ghost"
                                         type="submit"
+                                        disabled={loading}
                                     >
-                                        <span>Submit</span>
-                                        <IconArrowRightUpLine className="text-2xl" />
+                                        <span>{loading ? "Sending..." : "Submit"}</span>
+                                        {!loading && <IconArrowRightUpLine className="text-2xl" />}
                                     </Button>
                                 </div>
                             </div>
