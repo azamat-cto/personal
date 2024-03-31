@@ -16,7 +16,6 @@ function Hero() {
                         <h1 className="mb-2 text-center text-2xl tracking-[0.3px]">
                             Hi, I&apos;m Azamat <br />
                             Frontend Developer <br />
-                            Based in Tashkent
                         </h1>
 
                         <div className="relative grid h-[290px] w-[200px] place-items-center justify-self-center rounded-[6.25rem] border-2 bg-background">
@@ -74,8 +73,8 @@ function Hero() {
                                 BIOGRAPHY
                             </h3>
                             <p className="pr-16 font-display text-heading">
-                                Hi, I&apos;m Azamat, Frontend Developer. Passionate about designing
-                                beautiful web interfaces. Based in Uzbekistan.
+                                Passionate frontend developer focused on creating interactive,
+                                accessible, and responsive websites.
                             </p>
                         </div>
                         <div>
@@ -119,7 +118,7 @@ function Hero() {
                                 YEARS OF EXPERIENCE
                             </h3>
                             <p className="pr-16 font-display text-2xl font-semibold text-heading">
-                                03+
+                                02+
                             </p>
                         </div>
                         <div>
@@ -135,7 +134,7 @@ function Hero() {
                                 COMPANIES WORKED
                             </h3>
                             <p className="pr-16 font-display text-2xl font-semibold text-heading">
-                                02+
+                                01+
                             </p>
                         </div>
                     </div>
