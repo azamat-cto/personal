@@ -58,7 +58,8 @@ function Footer() {
                     </ul>
 
                     <div className="text-center">
-                        &#169; {new Date().getFullYear()} azamatcto. All rights reserved.
+                        &#169; {new Date().getFullYear()} azamatcto. All rights
+                        reserved.
                     </div>
                 </div>
             </div>

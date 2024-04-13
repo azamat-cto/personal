@@ -73,8 +73,9 @@ function Hero() {
                                 BIOGRAPHY
                             </h3>
                             <p className="pr-16 font-display text-heading">
-                                Passionate frontend developer focused on creating interactive,
-                                accessible, and responsive websites.
+                                Passionate frontend developer focused on
+                                creating interactive, accessible, and responsive
+                                websites.
                             </p>
                         </div>
                         <div>
@@ -96,7 +97,10 @@ function Hero() {
                                 >
                                     azamatkhabibullaevcto@gmail.com
                                 </a>
-                                <a className="font-display" href="tel:998909179930">
+                                <a
+                                    className="font-display"
+                                    href="tel:998909179930"
+                                >
                                     +998 (90) 917-99-30
                                 </a>
                             </div>

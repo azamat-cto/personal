@@ -18,7 +18,10 @@ export const sendEmail = async (formData: Inputs) => {
         to: "azamatkhabibullaevcto@gmail.com",
         subject: formData.username,
         reply_to: formData.email as string,
-        react: EmailTemplate({ email: formData.email, message: formData.message }),
+        react: EmailTemplate({
+            email: formData.email,
+            message: formData.message,
+        }),
     });
 
     return data;

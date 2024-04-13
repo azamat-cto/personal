@@ -87,7 +87,10 @@ function Skills() {
                             </h3>
                             <div className="grid grid-cols-3 gap-x-8 gap-y-10">
                                 {skill.items.map((item) => (
-                                    <div className="grid justify-center text-center" key={item.id}>
+                                    <div
+                                        className="grid justify-center text-center"
+                                        key={item.id}
+                                    >
                                         <div className="mb-2 grid h-[100px] w-[80px] place-items-center rounded-[3rem] bg-card transition-transform hover:animate-bounce-skills">
                                             <Image
                                                 className="h-auto w-[40px]"
@@ -97,7 +100,9 @@ function Skills() {
                                                 alt={`${item.label} logo`}
                                             />
                                         </div>
-                                        <h3 className="text-sm">{item.label}</h3>
+                                        <h3 className="text-sm">
+                                            {item.label}
+                                        </h3>
                                         <p className="text-2xs text-foreground-light">
                                             {item.level}
                                         </p>

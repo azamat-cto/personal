@@ -47,7 +47,9 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
                 >
                     <div className="flex min-h-[100dvh] flex-col">
                         <Header />
-                        <main className="flex-1 overflow-hidden">{children}</main>
+                        <main className="flex-1 overflow-hidden">
+                            {children}
+                        </main>
                         <Footer />
                     </div>
                     <Toaster />

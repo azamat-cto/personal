@@ -1,6 +1,6 @@
 "use client";
 
-import Porject1 from "@/assets/images/project1.jpg";
+import Porject1 from "@/assets/images/project1.png";
 import Porject2 from "@/assets/images/project2.jpg";
 import Porject3 from "@/assets/images/project3.jpg";
 import Porject4 from "@/assets/images/project4.jpg";
@@ -21,21 +21,12 @@ import {
 
 const projects = [
     {
-        id: "cloud-retail",
+        id: "bakery",
         img: Porject1,
-        subtitle: "Monorepo",
-        title: "Cloud Retail",
-        url: "https://cloudretailmonorepo.vercel.app",
-        techs: [
-            "PostgreSQL",
-            "Prisma",
-            "tRPC",
-            "Typescript",
-            "React",
-            "TailwindCSS",
-            "Docker",
-            "CI",
-        ],
+        subtitle: "Website",
+        title: "Bakery",
+        url: "https://bakery-nu-six.vercel.app/",
+        techs: ["React", "Next", "Typescript", "Tailwind", "shadcn/ui"],
     },
     {
         id: "project",
@@ -114,7 +105,9 @@ function Projects() {
                                     <p className="mb-2 text-sm text-foreground-light">
                                         {project.subtitle}
                                     </p>
-                                    <h2 className="mb-2 text-xl">{project.title}</h2>
+                                    <h2 className="mb-2 text-xl">
+                                        {project.title}
+                                    </h2>
                                     <a
                                         className="group inline-flex items-center gap-x-2 text-sm text-heading"
                                         href={project.url}

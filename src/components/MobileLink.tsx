@@ -7,7 +7,13 @@ type MobileLinkProps = {
     className?: string;
 };
 
-function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
+function MobileLink({
+    href,
+    onOpenChange,
+    className,
+    children,
+    ...props
+}: MobileLinkProps) {
     return (
         <a
             href={href}

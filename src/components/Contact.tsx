@@ -57,7 +57,9 @@ function Contact() {
         try {
             await sendEmail(data);
             toast("Message successfully sent", {
-                description: dayjs(new Date()).format(`dddd, MMMM D, YYYY [at] HH:mm A`),
+                description: dayjs(new Date()).format(
+                    `dddd, MMMM D, YYYY [at] HH:mm A`,
+                ),
                 action: {
                     label: "Close",
                     onClick: () => console.log("Closed"),
@@ -95,7 +97,9 @@ function Contact() {
 
                         <ul className="grid gap-y-8">
                             <li className="flex flex-col items-start  gap-y-1">
-                                <span className="text-sm text-foreground-light">Email</span>
+                                <span className="text-sm text-foreground-light">
+                                    Email
+                                </span>
                                 <a
                                     className="font-display text-sm text-heading"
                                     href="mailto:azamatkhabibullaevcto@gmail.com"
@@ -105,7 +109,9 @@ function Contact() {
                             </li>
 
                             <li className="flex flex-col items-start gap-y-1">
-                                <span className="text-sm text-foreground-light">Telegram</span>
+                                <span className="text-sm text-foreground-light">
+                                    Telegram
+                                </span>
                                 <span className="font-display text-sm text-heading">
                                     @azamatcto
                                 </span>
@@ -121,7 +127,9 @@ function Contact() {
                             </li>
 
                             <li className="flex flex-col items-start gap-y-1">
-                                <span className="text-sm text-foreground-light">Instagram</span>
+                                <span className="text-sm text-foreground-light">
+                                    Instagram
+                                </span>
                                 <span className="font-display text-sm text-heading">
                                     @azamatcto
                                 </span>
@@ -213,7 +221,9 @@ function Contact() {
                                         type="submit"
                                         disabled={loading}
                                     >
-                                        <span>{loading ? "Sending..." : "Send"}</span>
+                                        <span>
+                                            {loading ? "Sending..." : "Send"}
+                                        </span>
                                     </Button>
                                 </div>
                             </div>

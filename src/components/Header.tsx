@@ -61,7 +61,11 @@ function Header() {
         <header className="fixed bottom-[1rem] left-0 z-50 w-full md:static">
             <div className="nav container">
                 <div className="flex h-[4rem] items-center justify-between rounded-[3rem] border bg-background px-6 shadow-3xl md:rounded-none md:px-[0] md:shadow-none">
-                    <a className="font-display font-medium text-heading" href="/" title="logo">
+                    <a
+                        className="font-display font-medium text-heading"
+                        href="/"
+                        title="logo"
+                    >
                         Azamat.
                     </a>
 
@@ -118,7 +122,9 @@ function Header() {
                                     >
                                         <Button size="icon" variant="ghost">
                                             <IconCloseLine />
-                                            <span className="sr-only">Close</span>
+                                            <span className="sr-only">
+                                                Close
+                                            </span>
                                         </Button>
                                     </SheetClose>
                                 </SheetContent>
